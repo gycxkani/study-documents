@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <el-container id="container">
     <el-header style="width: 100%" height="120px">
@@ -14,8 +13,8 @@
 </template>
 
 <script>
-import Header from "./Header.vue";
-import Body from "./Body.vue";
+import Header from "./AppHeader.vue";
+import Body from "./AppBody.vue";
 
 export default {
   components: {

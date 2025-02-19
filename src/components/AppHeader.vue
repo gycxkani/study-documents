@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <el-container style="margin: 0; padding: 0">
     <el-header style="margin: 0; padding: 0">
@@ -10,11 +9,11 @@
         background-color="#e8e7e3"
         text-color="#777777"
         active-text-color="#000000"
-        :default-active="0"
+        :default-active="active"
       >
         <el-menu-item
           v-for="item in items"
-          :index="item.index"
+          :index="item.index.toString()"
           :key="item.index"
         >
           <div id="text">{{ item.title }}</div>
@@ -27,6 +26,11 @@
 <script>
 export default {
   props: ["items"],
+  data() {
+    return {
+      active: "0",
+    };
+  },
 };
 </script>
 
