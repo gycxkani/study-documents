@@ -9,11 +9,12 @@
         background-color="#e8e7e3"
         text-color="#777777"
         active-text-color="#000000"
-        :default-active="active"
+        :default-active="0"
+        @select="selectItem"
       >
         <el-menu-item
           v-for="item in items"
-          :index="item.index.toString()"
+          :index="item.index"
           :key="item.index"
         >
           <div id="text">{{ item.title }}</div>
@@ -31,9 +32,13 @@ export default {
       active: "0",
     };
   },
+  methods: {
+    selectItem(index) {
+      this.$emit("selected", index);
+    },
+  },
 };
 </script>
-
 <style scoped>
 #title {
   color: brown;
