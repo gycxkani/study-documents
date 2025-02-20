@@ -31,7 +31,7 @@ import FileManager from "../tools/FileManager.js";
 export default {
   mounted() {
     // 组件挂载的时候，加载默认的首篇文章
-    console.log(this.topic, this.items[this.currentIndex].title);
+    // console.log(this.topic, this.items[this.currentIndex].title);
     FileManager.getPostContent(
       this.topic,
       this.items[this.currentIndex].title
